@@ -14,6 +14,7 @@
 		59C99C4A203323EA00B677B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59C99C48203323EA00B677B4 /* LaunchScreen.storyboard */; };
 		59C99C55203323EB00B677B4 /* Apple_PieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C99C54203323EB00B677B4 /* Apple_PieTests.swift */; };
 		59C99C60203323EB00B677B4 /* Apple_PieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C99C5F203323EB00B677B4 /* Apple_PieUITests.swift */; };
+		59C99C6E203442FC00B677B4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C99C6D203442FC00B677B4 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		59C99C5B203323EB00B677B4 /* Apple PieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apple PieUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C99C5F203323EB00B677B4 /* Apple_PieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_PieUITests.swift; sourceTree = "<group>"; };
 		59C99C61203323EB00B677B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59C99C6D203442FC00B677B4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				59C99C3F203323EA00B677B4 /* AppDelegate.swift */,
 				59C99C41203323EA00B677B4 /* ViewController.swift */,
 				59C99C43203323EA00B677B4 /* Main.storyboard */,
+				59C99C6D203442FC00B677B4 /* Game.swift */,
 				59C99C46203323EA00B677B4 /* Assets.xcassets */,
 				59C99C48203323EA00B677B4 /* LaunchScreen.storyboard */,
 				59C99C4B203323EA00B677B4 /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59C99C42203323EA00B677B4 /* ViewController.swift in Sources */,
+				59C99C6E203442FC00B677B4 /* Game.swift in Sources */,
 				59C99C40203323EA00B677B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +437,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Apple-Pie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -448,7 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Apple-Pie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
