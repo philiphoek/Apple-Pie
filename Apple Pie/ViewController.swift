@@ -13,25 +13,6 @@ class ViewController: UIViewController {
     var listOfWords = ["food", "names", "hobbies", "animals", "dogs", "bed", "computer"]
     let incorrectMovesAllowed = 7
     
-    var totalWins = 0 {
-        didSet {
-            newRound()
-        }
-    }
-    var totalLosses = 0 {
-        didSet {
-            newRound()
-        }
-    }
-    
-    var currentGame: Game!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        newRound()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     @IBOutlet weak var treeImageView: UIImageView!
     
     @IBOutlet weak var correctWordLabel: UILabel!
@@ -39,7 +20,29 @@ class ViewController: UIViewController {
     
     @IBOutlet var letterButtons: [UIButton]!
     
+    var currentGame: Game!
+    
+    var totalWins = 0 {
+        // Keeps count of wins
+        didSet {
+            newRound()
+        }
+    }
+    var totalLosses = 0 {
+        // Keeps count of losses
+        didSet {
+            newRound()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        newRound()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
     func newRound() {
+        // Initiates new round
         if !listOfWords.isEmpty {
             let newWord = listOfWords.removeFirst()
             currentGame = Game(word: newWord,
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
+        // Updates the image etc
         var letters = [String]()
         for letter in currentGame.formattedWord {
             letters.append(String(letter))
@@ -64,6 +68,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
+        // Checks if button is pressed and acts accordingly
         sender.isEnabled = false
         let letterString = sender.title(for: .normal)!
         let letter = Character(letterString.lowercased())
@@ -73,6 +78,7 @@ class ViewController: UIViewController {
     }
     
     func updateGameState() {
+        // Checks for win or loss
         if currentGame.incorrectMovesRemaining == 0 {
             totalLosses += 1
         } else if currentGame.word == currentGame.formattedWord {
@@ -83,6 +89,7 @@ class ViewController: UIViewController {
     }
     
     func enableLetterButtons(_ enable: Bool) {
+        // Resets buttons
         for button in letterButtons {
             button.isEnabled = enable
         }
